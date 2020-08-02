@@ -1,0 +1,29 @@
+{{>header}}
+<main id="main">
+  <!--==========================
+      Team Section
+    ============================-->
+  <section id="team">
+    <div class="container wow fadeInUp">
+      <div class="section-header">
+        <h3 class="section-title">Get Weather</h3>
+        <p class="section-description">Enter your location and get the weather information</p>
+      </div>
+      <div class="row">
+        <div id="forecast-form-wrapper">
+          <div id="form-wrapper">
+            <form id="forecast-form">
+              <input type="text" name="forecast-location" id="forecast-location" />
+              <input type="submit" name="forecast-submit" value="Get Forecast" />
+            </form>
+          </div>
+          <div id="forecast-info-wrapper">
+            <div id="forcast-info">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- #team -->
+</main>
+{{>footer}}
