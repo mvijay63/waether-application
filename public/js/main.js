@@ -10,7 +10,7 @@ form.addEventListener("submit", (e) => {
 const showForecast = (location) => {
   const div = document.querySelector("#forcast-info")
   div.innerHTML = "Loading..."
-  fetch("http://localhost:3000/forecast?location=" + location).then((response) => {
+  fetch("/forecast?location=" + location).then((response) => {
     response.json().then(data => {
       console.log(data)
       if (data.message !== undefined) {

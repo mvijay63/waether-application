@@ -5,8 +5,10 @@ const location = require("./utils/location")
 const forecast = require("./utils/forecast")
 const app = express()
 const publicDir = path.join(__dirname , "../public")
+const port = process.env.PORT || 3000 
 app.use(express.static(publicDir))
 app.set('view engine' , 'hbs')
+
 
 const partialsDir = path.join(__dirname , "../views/partials")
 hbs.registerPartials(partialsDir)
@@ -51,6 +53,6 @@ app.get('*' , (req , res) => {
   res.render('404' , {title : "Not Found"}) 
 })
 
-app.listen(3000 , () => {
+app.listen(port , () => {
     console.log("working")
 })
